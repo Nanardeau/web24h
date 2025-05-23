@@ -1,105 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <link rel="stylesheet" href="style.css">
-  <meta name="keywords" content="Lyon, Fête des Lumières, 2025, événements, culture, art, lumière">
-  <meta name="description" content="La Fête des Lumières de Lyon est un événement annuel qui illumine la ville avec des installations artistiques et des spectacles lumineux.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="keywords" content="Lyon, Fête des Lumières, 2025, événements, culture, art, lumière" />
+  <meta name="description" content="La Fête des Lumières de Lyon est un événement annuel qui illumine la ville avec des installations artistiques et des spectacles lumineux." />
   <title>Déroulement - Fête des Lumières de Lyon</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background-color: #1b153e;
-      color: white;
-    }
-    header {
-      text-align: center;
-      padding: 20px;
-    }
-    #bubbles-container {
-      position: relative;
-      height: 1000px;
-    }
-    .bubble {
-      position: absolute;
-      border-radius: 50%;
-      width: 180px;
-      height: 180px;
-      overflow: hidden;
-      text-align: center;
-      background: #f0f0f0;
-      color: black;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-    .bubble img {
-      width: 100%;
-      height: auto;
-    }
-    .bubble h3 {
-      margin: 0;
-    }
-    .bubble-content {
-      display: none;
-      padding: 10px;
-    }
-    .bubble.expanded {
-      width: 300px;
-      height: auto;
-      border-radius: 20px;
-      padding: 15px;
-    }
-    .bubble.expanded .bubble-content {
-      display: block;
-    }
-    #gallery {
-      margin-top: 50px;
-      text-align: center;
-    }
-    .photo-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-    }
-    .photo-grid img {
-      width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-    }
-    .photo-grid img:hover {
-      transform: scale(1.05);
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-    }
-    .form-buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      margin-top: 10px;
-    }
-    .nav-button {
-      padding: 8px 16px;
-      font-size: 16px;
-      cursor: pointer;
-      border-radius: 5px;
-      background-color: #ffffff;
-      color: #1b153e;
-      text-decoration: none;
-      transition: background-color 0.2s ease;
-    }
-    .nav-button:hover {
-      background-color: #dddddd;
-    }
-  </style>
+  <link rel="stylesheet" href="styleLilian.css" />
 </head>
 <body>
   <header>
@@ -122,24 +29,24 @@
   <main>
     <section id="bubbles-container">
       <div class="bubble" onclick="expandBubble(this)" style="top:10%; left:10%;">
-        <img src="image1.jpg" alt="Origines">
-        <h3 data-key="origines">Origines</h3>
-        <div class="bubble-content" data-key="origines_text">
-          <p>Texte sur les origines de la fête des lumières à Lyon...</p>
+        <img src="image1.jpg" alt="Présentation" />
+        <h3 data-key="presentation">Présentation</h3>
+        <div class="bubble-content" data-key="presentation_text">
+          <p>La Fête des Lumières de Lyon ...</p>
         </div>
       </div>
       <div class="bubble" onclick="expandBubble(this)" style="top:45%; left:70%;">
-        <img src="image2.jpg" alt="Évolution">
-        <h3 data-key="evolution">Évolution</h3>
-        <div class="bubble-content" data-key="evolution_text">
-          <p>Texte sur l'évolution de l'événement au fil des années...</p>
+        <img src="image2.jpg" alt="Activités" />
+        <h3 data-key="activities">Activités</h3>
+        <div class="bubble-content" data-key="activities_text">
+          <p>Durant cette fête absolument sublime, vous pourrez profiter de ...</p>
         </div>
       </div>
       <div class="bubble" onclick="expandBubble(this)" style="top:80%; left:45%;">
-        <img src="image3.jpg" alt="Aujourd'hui">
-        <h3 data-key="aujourdhui">Aujourd'hui</h3>
-        <div class="bubble-content" data-key="aujourdhui_text">
-          <p>Description de la fête dans sa forme actuelle et ses installations artistiques modernes...</p>
+        <img src="image3.jpg" alt="Prochaine Édition" />
+        <h3 data-key="next_edition">Prochaine Édition</h3>
+        <div class="bubble-content" data-key="next_edition_text">
+          <p>Nous vous attendons pour la prochaine édition de la Fête des Lumières du ...</p>
         </div>
       </div>
     </section>
@@ -147,9 +54,9 @@
     <section id="gallery">
       <h2 data-key="gallery_title">Galerie Photos</h2>
       <div class="photo-grid">
-        <img src="photo1.jpg" alt="Installation 1">
-        <img src="photo2.jpg" alt="Installation 2">
-        <img src="photo3.jpg" alt="Installation 3">
+        <img src="photo1.jpg" alt="Installation 1" />
+        <img src="photo2.jpg" alt="Installation 2" />
+        <img src="photo3.jpg" alt="Installation 3" />
       </div>
     </section>
   </main>
@@ -165,12 +72,12 @@
         menu_history: "Histoire",
         menu_unfolding: "Déroulement",
         menu_news: "Actualité",
-        origines: "Origines",
-        origines_text: "Texte sur les origines de la fête des lumières à Lyon...",
-        evolution: "Évolution",
-        evolution_text: "Texte sur l'évolution de l'événement au fil des années...",
-        aujourdhui: "Aujourd'hui",
-        aujourdhui_text: "Description de la fête dans sa forme actuelle et ses installations artistiques modernes...",
+        presentation: "Présentation",
+        presentation_text: "La Fête des Lumières de Lyon ...",
+        activities: "Activités",
+        activities_text: "Durant cette fête absolument sublime, vous pourrez profiter de ...",
+        next_edition: "Prochaine Édition",
+        next_edition_text: "Nous vous attendons pour la prochaine édition de la Fête des Lumières du ... au ...",
         gallery_title: "Galerie Photos",
         footer_text: "© 2025 Fête des Lumières de Lyon"
       },
@@ -179,12 +86,12 @@
         menu_history: "History",
         menu_unfolding: "Unfolding",
         menu_news: "News",
-        origines: "Origins",
-        origines_text: "Text about the origins of the Festival of Lights in Lyon...",
-        evolution: "Evolution",
-        evolution_text: "Text about how the event has evolved over the years...",
-        aujourdhui: "Today",
-        aujourdhui_text: "Description of the festival in its current form with modern artistic installations...",
+        presentation: "Presentation",
+        presentation_text: "The Festival of Lights in Lyon...",
+        activities: "Activities",
+        activities_text: "During this beautiful festival, you'll be able to enjoy ...",
+        next_edition: "Next Edition",
+        next_edition_text: "We look forward to seeing you at the next edition of the Festival of Lights from ... to ...",
         gallery_title: "Photo Gallery",
         footer_text: "© 2025 Festival of Lights in Lyon"
       }

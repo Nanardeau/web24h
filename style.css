@@ -48,11 +48,12 @@ header img {
 header nav{
     display:flex;
     justify-content: space-between;
-    width:50%;
+    width: 50%;
     align-items: center;
 }
 
 header nav button {
     height: min-content;
     width: max-content;
+    border-radius: 20px;
 }

@@ -29,7 +29,7 @@ p{
     text-align:justify;
 }
 .card:hover p, .card:hover h5{
-    display:inline-block;
+    
     background:linear-gradient(to top, blue,purple);
     background-clip:text;
     -webkit-background-clip: text;

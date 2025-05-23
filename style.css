@@ -1,0 +1,27 @@
+
+
+span{
+    display:inline-block;
+    background:linear-gradient(to top, blue,purple);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+:root{
+    --header:#17143A;
+
+}
+
+body{
+
+    background-color: var(--header);
+    color:white;
+    font-family:'Playfair';
+}
+.container_grid{
+    display:grid;
+    column-gap: 20%;
+    row-gap:50%;
+    grid-template-columns: 20% 20%;
+    justify-content: center;
+}

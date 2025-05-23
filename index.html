@@ -12,7 +12,25 @@
 
     <title>Page Bootstrap</title>
 </head>
-<body>
+<body id = "container">
+    <script>
+        (function() {
+            document.addEventListener("mousemove", parallax);
+            const elem = document.querySelector("#container");
+
+            function parallax(e) {
+                let _w = window.innerWidth/2;
+                let _h = window.innerHeight/2;
+                let _mouseX = e.clientX;
+                let _mouseY = e.clientY;
+                let _depth1 = `${50 - (_mouseX - _w) * 0.01}% ${50 - (_mouseY - _h) * 0.01}%`;
+                let _depth2 = `${50 - (_mouseX - _w) * 0.02}% ${50 - (_mouseY - _h) * 0.02}%`;
+                let _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
+                let x = `${_depth3}, ${_depth2}, ${_depth1}`;
+                elem.style.backgroundPosition = x;
+            }
+        })();
+    </script>
     <header>
         <nav class="navbar navbar-expand-lg bg-dark text-white">
             <div class="container-fluid py-2 py-lg-0">
@@ -54,6 +72,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
+            
         </nav>
     </header>
 

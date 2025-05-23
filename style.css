@@ -1,3 +1,9 @@
 body{
-    background-image:url("images/hello_kitty.jpg");
+}
+span{
+    display:inline-block;
+    background:linear-gradient(to left, blue,pink);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

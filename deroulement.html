@@ -1,51 +1,216 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit:no">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <meta keywords="Lyon, Fête des Lumières, 2025, événements, culture, art, lumière">
-    <meta description="La Fête des Lumières de Lyon est un événement annuel qui illumine la ville avec des installations artistiques et des spectacles lumineux.">
-    <title>Déroulement - Fêtes des Lumières de Lyon</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+  <meta name="keywords" content="Lyon, Fête des Lumières, 2025, événements, culture, art, lumière">
+  <meta name="description" content="La Fête des Lumières de Lyon est un événement annuel qui illumine la ville avec des installations artistiques et des spectacles lumineux.">
+  <title>Déroulement - Fête des Lumières de Lyon</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1b153e;
+      color: white;
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+    #bubbles-container {
+      position: relative;
+      height: 1000px;
+    }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+      text-align: center;
+      background: #f0f0f0;
+      color: black;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .bubble img {
+      width: 100%;
+      height: auto;
+    }
+    .bubble h3 {
+      margin: 0;
+    }
+    .bubble-content {
+      display: none;
+      padding: 10px;
+    }
+    .bubble.expanded {
+      width: 300px;
+      height: auto;
+      border-radius: 20px;
+      padding: 15px;
+    }
+    .bubble.expanded .bubble-content {
+      display: block;
+    }
+    #gallery {
+      margin-top: 50px;
+      text-align: center;
+    }
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .photo-grid img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .photo-grid img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+    .form-buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+    .nav-button {
+      padding: 8px 16px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #ffffff;
+      color: #1b153e;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    .nav-button:hover {
+      background-color: #dddddd;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <a href="index.html"><img src="" alt="logo" title="logo"></a>
-        <nav>
-            <ul>
-                <li><a href="histoire.html">Histoire</a></li>
-                <li><a href="deroulement.html">Déroulement</a></li>
-                <li><a href="actualite.html">Actualité</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1 data-key="header_title">Déroulement</h1>
+    <nav>
+      <div class="form-buttons">
+        <a href="histoire.html" class="nav-button" data-key="menu_history">Histoire</a>
+        <a href="deroulement.html" class="nav-button" data-key="menu_unfolding">Déroulement</a>
+        <a href="actualite.html" class="nav-button" data-key="menu_news">Actualités</a>
+      </div>
+    </nav>
+    <div style="position:absolute; top:20px; right:20px;">
+      <select id="language-switcher" onchange="switchLanguage()">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
 
-    <main>
-        <h1>Déroulement de la Fête</h2>
-        <article>
-            <h2>Titre premier article sur les origines</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi voluptate doloribus asperiores unde vel fugit tempora explicabo temporibus? Officiis, fugit reiciendis sed quasi laborum sapiente perspiciatis architecto in ipsum asperiores dolore illo eum repellat dolorum, odio inventore molestiae quod consectetur harum suscipit exercitationem porro. Asperiores consequatur, nulla quisquam rem exercitationem error eos sint numquam doloremque quis dignissimos neque rerum, itaque tempore sed voluptatum qui earum! Autem, ipsam sed? Asperiores, dolor molestias. Iste, excepturi magni. Quisquam repudiandae in pariatur labore vero. Obcaecati hic velit quas fugiat non quia nobis natus et, accusantium veniam eos tempore vitae neque iure quos nesciunt quibusdam voluptatum facere ducimus. Ipsa voluptates, saepe vel commodi, a aspernatur facilis quasi delectus enim ipsum atque, quisquam nisi. Ducimus iusto amet odio! Ratione libero asperiores, sapiente laborum rerum repudiandae ea aperiam suscipit, eius, illo at. Labore accusantium iusto blanditiis qui porro quasi omnis, explicabo praesentium officia dolor esse, placeat dignissimos.
-            </p>
-        </article>
+  <main>
+    <section id="bubbles-container">
+      <div class="bubble" onclick="expandBubble(this)" style="top:10%; left:10%;">
+        <img src="image1.jpg" alt="Origines">
+        <h3 data-key="origines">Origines</h3>
+        <div class="bubble-content" data-key="origines_text">
+          <p>Texte sur les origines de la fête des lumières à Lyon...</p>
+        </div>
+      </div>
+      <div class="bubble" onclick="expandBubble(this)" style="top:45%; left:70%;">
+        <img src="image2.jpg" alt="Évolution">
+        <h3 data-key="evolution">Évolution</h3>
+        <div class="bubble-content" data-key="evolution_text">
+          <p>Texte sur l'évolution de l'événement au fil des années...</p>
+        </div>
+      </div>
+      <div class="bubble" onclick="expandBubble(this)" style="top:80%; left:45%;">
+        <img src="image3.jpg" alt="Aujourd'hui">
+        <h3 data-key="aujourdhui">Aujourd'hui</h3>
+        <div class="bubble-content" data-key="aujourdhui_text">
+          <p>Description de la fête dans sa forme actuelle et ses installations artistiques modernes...</p>
+        </div>
+      </div>
+    </section>
 
-        <article>
-            <h2>Titre second article sur les origines</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi voluptate doloribus asperiores unde vel fugit tempora explicabo temporibus? Officiis, fugit reiciendis sed quasi laborum sapiente perspiciatis architecto in ipsum asperiores dolore illo eum repellat dolorum, odio inventore molestiae quod consectetur harum suscipit exercitationem porro. Asperiores consequatur, nulla quisquam rem exercitationem error eos sint numquam doloremque quis dignissimos neque rerum, itaque tempore sed voluptatum qui earum! Autem, ipsam sed? Asperiores, dolor molestias. Iste, excepturi magni. Quisquam repudiandae in pariatur labore vero. Obcaecati hic velit quas fugiat non quia nobis natus et, accusantium veniam eos tempore vitae neque iure quos nesciunt quibusdam voluptatum facere ducimus. Ipsa voluptates, saepe vel commodi, a aspernatur facilis quasi delectus enim ipsum atque, quisquam nisi. Ducimus iusto amet odio! Ratione libero asperiores, sapiente laborum rerum repudiandae ea aperiam suscipit, eius, illo at. Labore accusantium iusto blanditiis qui porro quasi omnis, explicabo praesentium officia dolor esse, placeat dignissimos.
-            </p>
-        </article>
+    <section id="gallery">
+      <h2 data-key="gallery_title">Galerie Photos</h2>
+      <div class="photo-grid">
+        <img src="photo1.jpg" alt="Installation 1">
+        <img src="photo2.jpg" alt="Installation 2">
+        <img src="photo3.jpg" alt="Installation 3">
+      </div>
+    </section>
+  </main>
 
-        <article>
-            <h2>Titre troisième article sur les origines</h2>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi voluptate doloribus asperiores unde vel fugit tempora explicabo temporibus? Officiis, fugit reiciendis sed quasi laborum sapiente perspiciatis architecto in ipsum asperiores dolore illo eum repellat dolorum, odio inventore molestiae quod consectetur harum suscipit exercitationem porro. Asperiores consequatur, nulla quisquam rem exercitationem error eos sint numquam doloremque quis dignissimos neque rerum, itaque tempore sed voluptatum qui earum! Autem, ipsam sed? Asperiores, dolor molestias. Iste, excepturi magni. Quisquam repudiandae in pariatur labore vero. Obcaecati hic velit quas fugiat non quia nobis natus et, accusantium veniam eos tempore vitae neque iure quos nesciunt quibusdam voluptatum facere ducimus. Ipsa voluptates, saepe vel commodi, a aspernatur facilis quasi delectus enim ipsum atque, quisquam nisi. Ducimus iusto amet odio! Ratione libero asperiores, sapiente laborum rerum repudiandae ea aperiam suscipit, eius, illo at. Labore accusantium iusto blanditiis qui porro quasi omnis, explicabo praesentium officia dolor esse, placeat dignissimos.
-            </p>
-        </article>
-    </main>
+  <footer>
+    <p data-key="footer_text">&copy; 2025 Fête des Lumières de Lyon</p>
+  </footer>
 
-    <footer>
+  <script>
+    const translations = {
+      fr: {
+        header_title: "Déroulement",
+        menu_history: "Histoire",
+        menu_unfolding: "Déroulement",
+        menu_news: "Actualité",
+        origines: "Origines",
+        origines_text: "Texte sur les origines de la fête des lumières à Lyon...",
+        evolution: "Évolution",
+        evolution_text: "Texte sur l'évolution de l'événement au fil des années...",
+        aujourdhui: "Aujourd'hui",
+        aujourdhui_text: "Description de la fête dans sa forme actuelle et ses installations artistiques modernes...",
+        gallery_title: "Galerie Photos",
+        footer_text: "© 2025 Fête des Lumières de Lyon"
+      },
+      en: {
+        header_title: "Program",
+        menu_history: "History",
+        menu_unfolding: "Unfolding",
+        menu_news: "News",
+        origines: "Origins",
+        origines_text: "Text about the origins of the Festival of Lights in Lyon...",
+        evolution: "Evolution",
+        evolution_text: "Text about how the event has evolved over the years...",
+        aujourdhui: "Today",
+        aujourdhui_text: "Description of the festival in its current form with modern artistic installations...",
+        gallery_title: "Photo Gallery",
+        footer_text: "© 2025 Festival of Lights in Lyon"
+      }
+    };
 
-    </footer>
+    function switchLanguage() {
+      const lang = document.getElementById("language-switcher").value;
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          if (el.tagName === "INPUT") {
+            el.value = translations[lang][key];
+          } else {
+            el.innerText = translations[lang][key];
+          }
+        }
+      });
+    }
+
+    function expandBubble(bubble) {
+      bubble.classList.toggle("expanded");
+    }
+
+    window.addEventListener('load', () => {
+      switchLanguage();
+    });
+  </script>
 </body>
 </html>

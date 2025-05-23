@@ -23,3 +23,35 @@ body{
     grid-template-columns: 20% 20%;
     justify-content: center;
 }
+p{
+    text-align:justify;
+}
+.card:hover p, .card:hover h5{
+    
+    background:linear-gradient(to top, blue,purple);
+    background-clip:text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    top: 0;
+}
+
+header img {
+    width: 35%;
+}
+
+header nav{
+    display:flex;
+    justify-content: space-between;
+    width:50%;
+    align-items: center;
+}
+
+header nav button {
+    height: min-content;
+}

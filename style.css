@@ -8,13 +8,13 @@ span{
     -webkit-text-fill-color: transparent;
 }
 :root{
-    --header:#17143A;
+    --main:#17143A;
 
 }
 
 body{
 
-    background-color: var(--header);
+    background-color: var(--main);
     color:white;
     font-family:'Playfair';
 }
@@ -40,4 +40,9 @@ header nav{
     justify-content: space-between;
     width:50%;
     
+}
+
+.dropdown-item:hover{
+    background-color: var(--main);
+    color:white;
 }

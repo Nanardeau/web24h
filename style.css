@@ -52,7 +52,7 @@ header nav{
     align-items: center;
 }
 
-header nav button {
+header nav input {
     height: min-content;
     width: max-content;
     border-radius: 20px;

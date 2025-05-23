@@ -54,4 +54,5 @@ header nav{
 
 header nav button {
     height: min-content;
+    width: max-content;
 }

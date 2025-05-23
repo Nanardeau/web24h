@@ -35,3 +35,9 @@ p{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+header nav{
+    display:flex;
+    justify-content: space-between;
+    width:50%;
+    
+}

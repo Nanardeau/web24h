@@ -41,6 +41,10 @@ header nav{
     width:50%;
     
 }
+header{
+    width:50%;
+    margin:auto;
+}
 
 .dropdown-item:hover{
     background-color: var(--main);

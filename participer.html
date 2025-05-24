@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+  <meta name="keywords" content="Lyon, Fête des Lumières, 2025, participation, bénévoles, artistes" />
+  <meta name="description" content="Participez à la Fête des Lumières de Lyon en tant qu'artiste, bénévole ou passionné." />
+  <title>Participer - Fête des Lumières de Lyon</title>
+  <link rel="stylesheet" href="styleLilian.css" />
+</head>
+<body>
+  <header>
+    <div class="logo-title">
+        <img src="ton_logo.png" alt="Logo" class="logo" />
+        <h1 data-key="header_title">Participer</h1>
+    </div>
+    <nav>
+      <div class="form-buttons">
+        <a href="histoire.html" class="nav-button" data-key="menu_history">Histoire</a>
+        <a href="deroulement.html" class="nav-button" data-key="menu_unfolding">Déroulement</a>
+        <a href="actualite.html" class="nav-button" data-key="menu_news">Actualités</a>
+      </div>
+    </nav>
+    <div style="position:absolute; top:20px; right:20px;">
+      <select id="language-switcher" onchange="switchLanguage()">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+  </header>
+
+  <main>
+    <section id="infos-participation">
+      <h2 data-key="participate_title">Participer à l'événement</h2>
+      <p data-key="participate_text">Vous souhaitez contribuer à la Fête des Lumières ? Que vous soyez artiste, bénévole ou simple passionné, de nombreuses opportunités s'offrent à vous pour rejoindre cette aventure lumineuse.</p>
+    </section>
+  
+    <div class="join-container">
+      <a href="formulaire.html" id="join-link" data-key="join_us">Nous Rejoindre</a>
+    </div>
+  </main>
+
+  <footer>
+    <p data-key="footer_text">&copy; 2025 Fête des Lumières de Lyon</p>
+  </footer>
+
+
+  <script>
+    const translations = {
+      fr: {
+        header_title: "Participer",
+        menu_history: "Histoire",
+        menu_unfolding: "Déroulement",
+        menu_news: "Actualités",
+        participate_title: "Participer à l'événement",
+        participate_text: "Vous souhaitez contribuer à la Fête des Lumières ? Que vous soyez artiste, bénévole ou simple passionné, de nombreuses opportunités s'offrent à vous pour rejoindre cette aventure lumineuse.",
+        join_us: "Nous Rejoindre",
+        footer_text: "© 2025 Fête des Lumières de Lyon"
+      },
+      en: {
+        header_title: "Participate",
+        menu_history: "History",
+        menu_unfolding: "Unfolding",
+        menu_news: "News",
+        participate_title: "Participate in the Event",
+        participate_text: "Do you want to contribute to the Festival of Lights? Whether you're an artist, volunteer, or passionate visitor, there are many opportunities to join this bright adventure.",
+        join_us: "Join Us",
+        footer_text: "© 2025 Festival of Lights in Lyon"
+      }
+    };
+
+    function switchLanguage() {
+      const lang = document.getElementById("language-switcher").value;
+      document.querySelectorAll("[data-key]").forEach(el => {
+        const key = el.getAttribute("data-key");
+        if (translations[lang][key]) {
+          el.innerText = translations[lang][key];
+        }
+      });
+    }
+
+    window.addEventListener("load", () => {
+      switchLanguage();
+    });
+  </script>
+</body>
+</html>

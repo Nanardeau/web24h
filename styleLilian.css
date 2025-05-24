@@ -1,3 +1,4 @@
+/* Général */
 body, html {
   margin: 0;
   padding: 0;
@@ -9,8 +10,47 @@ body, html {
 header {
   text-align: center;
   padding: 20px;
+  position: relative;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Navigation */
+.form-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.nav-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #1b153e;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #dddddd;
+}
+
+/* Main centré */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Bubbles */
 #bubbles-container {
   position: relative;
   height: 1000px;
@@ -55,6 +95,7 @@ header {
   display: block;
 }
 
+/* Galerie */
 #gallery {
   margin-top: 50px;
   text-align: center;
@@ -79,31 +120,63 @@ header {
   transform: scale(1.05);
 }
 
-footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+/* Section Participer */
+#infos-participation {
+  background-color: #2b225c;
   padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
 }
 
-.form-buttons {
+#infos-participation h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+#infos-participation p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Centrage vertical et horizontal du lien */
+.join-container {
   display: flex;
-  gap: 15px;
   justify-content: center;
-  margin-top: 10px;
+  align-items: center;
+  height: 50vh; /* ajuste selon besoin */
 }
 
-.nav-button {
-  padding: 8px 16px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
+/* Lien stylisé comme un bouton */
+#join-link {
+  padding: 20px 40px;
+  font-size: 24px;
   background-color: #ffffff;
   color: #1b153e;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.nav-button:hover {
+#join-link:hover {
   background-color: #dddddd;
+  transform: scale(1.05);
+}
+
+/* --- Logo + Titre côte à côte centrés --- */
+.logo-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.logo-title img.logo {
+  height: 60px; /* ajuste selon ton logo */
+  width: auto;
+}
+
+.logo-title h1 {
+  font-size: 36px;
+  margin: 0;
 }

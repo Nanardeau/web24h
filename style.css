@@ -78,7 +78,7 @@ header img {
     width: 150px;
 }
 
-header nav a, section a{
+header nav a, section article a{
     height: min-content;
     width: max-content;
     text-decoration: none;
@@ -105,4 +105,23 @@ footer {
 footer p {
     margin: auto;
     text-align: center;
+}
+.sections_index{
+    display:flex;
+    justify-content: space-around;
+}
+.sections_index section{
+    width:40%;
+}
+.container_carousel{
+    width:70%;
+    margin:auto;
+    margin-bottom:5%;
+}
+.actus h1{
+    margin:auto;
+    width:fit-content;
+    margin-bottom:10%;
+    font-size:76px;
+    border-bottom:solid;
 }

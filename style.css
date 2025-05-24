@@ -149,17 +149,20 @@ footer p {
 .histoire .origines {
     display: flex;
     flex-direction: column;
-}
-
-.histoire .decembre {
-    width: 50%;
-}
-
-.histoire .decembre, .histoire .origines {
     margin: auto;
     margin-top: 5%;
 }
 
+.histoire .decembre {
+    width: 60%;
+    margin-top: 5%;
+    margin-left:19%;
+}
+
+
+.decembre p{
+    margin-left:100%;
+}
 .histoire .decembre p {
     margin: auto;
 }

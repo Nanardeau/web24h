@@ -15,6 +15,9 @@ body{
     background-color: var(--header);
     color:white;
     font-family:'Playfair';
+    background-image: url("images/bg.png");
+    background-size:120%;
+    background-repeat: no-repeat;
 }
 .container_grid{
     display:grid;

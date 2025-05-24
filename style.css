@@ -52,8 +52,18 @@ header nav{
     align-items: center;
 }
 
-header nav input {
+header nav a {
+    background-color: gray;
     height: min-content;
     width: max-content;
     border-radius: 20px;
+    text-decoration: none;
+    padding:10px;
+    color:black;
+}
+header nav a:hover{
+    background-color: rgb(112, 111, 111);
+}
+header nav a:active{
+    background-color: rgb(100, 99, 99);
 }

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap');
+
 span{
     display:inline-block;
     background:linear-gradient(to top, blue,purple);
@@ -24,6 +26,7 @@ body{
     justify-content: center;
 }
 p{
+    font-family: 'Roboto Flex';
     text-align:justify;
 }
 .card:hover p, .card:hover h5{

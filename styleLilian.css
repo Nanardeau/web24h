@@ -9,6 +9,11 @@ body, html {
   color: white;
 }
 
+p{
+    font-family: 'Roboto Flex';
+    text-align:justify;
+}
+
 header {
   text-align: center;
   padding: 20px;

@@ -18,8 +18,10 @@
                     let logo = document.getElementById('logo');
                     if (y > 600) { /* change this value here to make it show up at your desired scroll location. */
                         menuhopin.classList.add('displayFlexRow');
+                        logo.style.width = "100px";
                     } else {
                         menuhopin.classList.remove('displayFlexRow');
+                        logo.style.width = "150px";
                     }
                 
                 });

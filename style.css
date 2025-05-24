@@ -1,18 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap');
 
-span{
+body {
+    margin: 0;
+}
+
+span {
     display:inline-block;
     background:linear-gradient(to top, blue,purple);
     background-clip:text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-:root{
-    --header:#17143A;
 
+:root {
+    --header:#17143A;
 }
 
-body{
+body {
 
     background-color: var(--header);
     color:white;
@@ -72,4 +76,16 @@ header nav a:hover{
 }
 header nav a:active{
     background-color: rgb(100, 99, 99);
+}
+
+/* FOOTER */
+
+footer {
+    padding: 2em;
+    background-color: black;
+}
+
+footer div {
+    display: grid;
+    grid-template-columns: ;
 }

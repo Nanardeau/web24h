@@ -14,10 +14,24 @@ header {
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
+    margin-top: 5%;
+    padding: 2em;
+  background: linear-gradient(135deg, #9c3ac6, #3a31b5);
+    text-align: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: auto;
+    text-align: center;
+}
+
+footer a {
+    color: grey;
+}
+
+footer a:visited {
+    color: grey;
 }
 
 /* Navigation */

@@ -32,7 +32,8 @@ article h2{
 .container_grid{
     display:grid;
     column-gap: 20%;
-    row-gap:50%;
+    row-gap: 30px;
+    height: fit-content;
     grid-template-columns: 20% 20%;
     justify-content: center;
 }
@@ -94,6 +95,9 @@ header nav a:active{
 }
 
 footer {
+    margin-top: 5%;
+    padding: 2em;
+  background: linear-gradient(135deg, #9c3ac6, #3a31b5);
     text-align: center;
     justify-content: center;
 }
@@ -102,6 +106,15 @@ footer p {
     margin: auto;
     text-align: center;
 }
+
+footer a {
+    color: grey;
+}
+
+footer a:visited {
+    color: grey;
+}
+
 .sections_index{
     display:flex;
     justify-content: space-around;

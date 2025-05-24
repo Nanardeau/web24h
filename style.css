@@ -92,3 +92,13 @@ header nav a:hover{
 header nav a:active{
     background-color: rgb(100, 99, 99);
 }
+
+footer {
+    text-align: center;
+    justify-content: center;
+}
+
+footer p {
+    margin: auto;
+    text-align: center;
+}

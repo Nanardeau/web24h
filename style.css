@@ -108,6 +108,12 @@ footer p {
 }
 .sections_index section{
     width:40%;
+    
+}
+.sections_index article{
+    display:flex;
+    flex-direction: column;
+    
 }
 .container_carousel{
     width:70%;
@@ -186,5 +192,36 @@ footer p {
     border-radius:20px;
     
     margin-left:30%;
-    
+
+}
+.sections_index .bouton{
+    margin:2%;
+    margin-left:0;
+    background-color: white;
+    color:black;
+    border-radius: 4px;
+    padding:10px;
+}
+.sections_index{
+    margin-bottom:5%;
+}
+.bouton:hover{
+    background-color: rgb(201, 199, 199);
+}
+.bouton:active{
+    background-color: #17143A;
+    color:white;
+    border:solid 0.5px white;
+}
+.presentation{
+    margin:auto;
+    width:50%;
+    margin-bottom:5%;
+    margin-top:5%;
+}
+.presentation h1{
+    justify-self:center;
+}
+.presentation p{
+    text-align: justify ;
 }

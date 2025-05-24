@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:wght@400;700&display=swap');
 
-body {
+* {
     margin: 0;
+    padding: 0;
 }
 
 span {
@@ -17,16 +18,12 @@ span {
 }
 
 body {
-
     background-color: var(--header);
     color:white;
     font-family:'Playfair';
-    background-image: url("images/bg.png");
     background-repeat: no-repeat;    
 }
-main{
-    padding:3%;
-}
+
 article h2{
     margin-bottom:2%;
 
@@ -59,31 +56,33 @@ p{
 }
 
 header {
-    width: 50%;
-    margin: auto;
     display: flex;
-    top: 0;
-}
 
-header img {
-    width: 35%;
-}
+    margin: 0;
 
-header nav{
-    display:flex;
-    justify-content: space-between;
-    width: 50%;
+    flex-direction: column;
     align-items: center;
 }
 
+header nav {
+    margin: 2em;
+}
+
+header nav a {
+    margin: 0 2em;
+    font-size: 1.2rem;
+    font-family: 'Roboto Flex';
+}
+
+header img {
+    width: 150px;
+}
+
 header nav a, section a{
-    background-color: gray;
     height: min-content;
     width: max-content;
-    border-radius: 20px;
     text-decoration: none;
-    padding:10px;
-    color:black;
+    color:white;
 }
 
 header nav a:hover{
@@ -91,6 +90,11 @@ header nav a:hover{
 }
 header nav a:active{
     background-color: rgb(100, 99, 99);
+}
+
+.accueil {
+    height: 100vh;
+    background-image: url("images/bg.png");
 }
 
 footer {

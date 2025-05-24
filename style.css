@@ -156,10 +156,12 @@ footer p {
 .histoire .decembre {
     width: 60%;
     margin-top: 5%;
-    margin-left:19%;
+    margin-left:290px;
 }
 
-
+main{
+    padding:5%; 
+}
 .decembre p{
     margin-left:100%;
 }

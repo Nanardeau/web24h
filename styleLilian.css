@@ -53,26 +53,27 @@ main {
 /* Bubbles */
 #bubbles-container {
   position: relative;
-  height: 1000px;
+  height: 800px;
 }
 
 .bubble {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   position: absolute;
   border-radius: 50%;
   width: 180px;
   height: 180px;
   overflow: hidden;
   text-align: center;
-  background: #f0f0f0;
-  color: black;
+
+  background: linear-gradient(135deg, #8e44ad, #3498db);
+  color: white;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.bubble img {
-  width: 100%;
-  height: auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .bubble h3 {
@@ -102,17 +103,18 @@ main {
 }
 
 .photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colonnes fixes */
+  gap: 30px;
+  justify-items: center;
 }
 
 .photo-grid img {
-  width: 200px;
+  width: 100%;
+  max-width: 600px; /* plus grand qu'avant */
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
 
@@ -162,7 +164,7 @@ main {
   transform: scale(1.05);
 }
 
-/* --- Logo + Titre côte à côte centrés --- */
+/* Logo + Titre côte à côte centrés */
 .logo-title {
   display: flex;
   align-items: center;
@@ -172,7 +174,7 @@ main {
 }
 
 .logo-title img.logo {
-  height: 60px; /* ajuste selon ton logo */
+  height: 60px;
   width: auto;
 }
 

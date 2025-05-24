@@ -22,9 +22,23 @@ body {
     color:white;
     font-family:'Playfair';
     background-image: url("images/bg.png");
-
     background-repeat: no-repeat;    
 }
+main{
+    padding:3%;
+}
+article h2{
+    margin-bottom:2%;
+
+}
+.sections_index{
+    display:flex;
+    justify-content: space-around;
+}
+.sections_index section{
+    width:40%;
+}
+
 .container_grid{
     display:grid;
     column-gap: 20%;
@@ -62,7 +76,7 @@ header nav{
     align-items: center;
 }
 
-header nav a {
+header nav a, section a{
     background-color: gray;
     height: min-content;
     width: max-content;
@@ -71,21 +85,10 @@ header nav a {
     padding:10px;
     color:black;
 }
+
 header nav a:hover{
     background-color: rgb(112, 111, 111);
 }
 header nav a:active{
     background-color: rgb(100, 99, 99);
-}
-
-/* FOOTER */
-
-footer {
-    padding: 2em;
-    background-color: black;
-}
-
-footer div {
-    display: grid;
-    grid-template-columns: ;
 }

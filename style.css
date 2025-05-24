@@ -42,6 +42,7 @@ p{
 
 header {
     width: 50%;
+    height: 100vh;
     margin: auto;
     display: flex;
     top: 0;

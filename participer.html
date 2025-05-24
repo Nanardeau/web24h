@@ -12,11 +12,19 @@
 <header> 
   <a href="index.html"><img src="images/logo.png" alt="logo" title="logo"></a>
   <nav>
-      <a href="index.html">Accueil</a>        
-      <a href="actualite.html">Actualités</a>
-      <a href="deroulement.html">Déroulement</a>
+
+        <a href="deroulement.html" class="nav-button" data-key="menu_unfolding">Déroulement</a>
+        <a href="histoire.html" class="nav-button" data-key="menu_history">Histoire</a>
+        <a href="index.html" class="nav-button" data-key="menu_index">Accueil</a>
+        <a href="actualite.html" class="nav-button" data-key="menu_news">Actualités</a>
 
   </nav>
+  <div style="position:absolute; top:20px; right:10%;">
+      <select id="language-switcher" onchange="switchLanguage()">
+        <option value="fr">Français</option>
+        <option value="en">English</option>
+      </select>
+    </div>
 
 </header>
 
@@ -48,6 +56,7 @@
         menu_history: "Histoire",
         menu_unfolding: "Déroulement",
         menu_news: "Actualités",
+        menu_index: "Accueil",
         participate_title: "Participer à l'événement",
         participate_text: "Vous souhaitez contribuer à la Fête des Lumières ? Que vous soyez artiste, bénévole ou simple passionné, de nombreuses opportunités s'offrent à vous pour rejoindre cette aventure lumineuse.",
         join_us: "Nous Rejoindre",
@@ -58,6 +67,7 @@
         menu_history: "History",
         menu_unfolding: "Unfolding",
         menu_news: "News",
+        menu_index: "Home",
         participate_title: "Participate in the Event",
         participate_text: "Do you want to contribute to the Festival of Lights? Whether you're an artist, volunteer, or passionate visitor, there are many opportunities to join this bright adventure.",
         join_us: "Join Us",

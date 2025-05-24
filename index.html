@@ -9,8 +9,33 @@
     <title>Fêtes des Lumières de Lyon</title>
 </head>
 <body id="container">
-    <header>
-        <a href="index.html"><img src="images/logo.png" alt="logo" title="logo"></a>
+    <header id="header">
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                document.addEventListener('scroll', function() {
+                    let y = window.scrollY;
+                    let menuhopin = document.getElementById('header');
+                    let logo = document.getElementById('logo');
+                    if (y > 600) { /* change this value here to make it show up at your desired scroll location. */
+                        menuhopin.classList.add('displayFlexRow');
+                    } else {
+                        menuhopin.classList.remove('displayFlexRow');
+                    }
+                
+                });
+            });
+        </script>
+        <style>
+            #header{
+                position:fixed;
+            }
+            .displayFlexRow{
+                flex-direction: row;
+            }
+        </style>
+
+
+        <a href="index.html"><img id="logo" src="images/logo.png" alt="logo" title="logo"></a>
         <nav>
             <a href="histoire.html">Histoire</a>
             <a href="deroulement.html">Déroulement</a>
